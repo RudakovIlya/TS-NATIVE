@@ -1,4 +1,4 @@
-import React, {ChangeEvent, MouseEvent} from "react";
+import React, {MouseEvent} from "react";
 import {GovernmentBuildingsType, HouseType} from "../02_lesson-object/02_02";
 
 export const getStreetsTitlesOfGovernmentsBuildings = (buildings: Array<GovernmentBuildingsType>) => {
@@ -28,6 +28,12 @@ export const User = () => {
     const nameChanged = (event: MouseEvent<HTMLButtonElement>) => {
         saveUser?.(event)
     }
+
+    function identity<T>(arg: T): T {
+        console.log(arg)
+        return arg;
+    }
+    identity('2')
 
     return (
         <div>
